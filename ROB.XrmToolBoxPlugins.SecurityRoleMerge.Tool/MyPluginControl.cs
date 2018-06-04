@@ -49,40 +49,6 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             CloseTool();
         }
 
-        private void tsbSample_Click(object sender, EventArgs e)
-        {
-            // The ExecuteMethod method handles connecting to an
-            // organization if XrmToolBox is not yet connected
-            ExecuteMethod(GetAccounts);
-        }
-
-        private void GetAccounts()
-        {
-            WorkAsync(new WorkAsyncInfo
-            {
-                Message = "Getting accounts",
-                Work = (worker, args) =>
-                {
-                    args.Result = Service.RetrieveMultiple(new QueryExpression("account")
-                    {
-                        TopCount = 50
-                    });
-                },
-                PostWorkCallBack = (args) =>
-                {
-                    if (args.Error != null)
-                    {
-                        MessageBox.Show(args.Error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    var result = args.Result as EntityCollection;
-                    if (result != null)
-                    {
-                        MessageBox.Show($"Found {result.Entities.Count} accounts");
-                    }
-                }
-            });
-        }
-
         private void GetRoles()
         {
             WorkAsync(new WorkAsyncInfo
@@ -229,14 +195,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         private void linkLabel_showInstructions_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             textBox_instructions.Visible = !textBox_instructions.Visible;
-            if (textBox_instructions.Visible)
-            {
-                textBox_instructions.Text = "Hide Instructions";
-            }
-            else
-            {
-                textBox_instructions.Text = "Show Instructions";
-            }
+            linkLabel_showInstructions.Text = textBox_instructions.Visible ? "Hide Instructions" : "Show Instructions";
         }
     }
 }

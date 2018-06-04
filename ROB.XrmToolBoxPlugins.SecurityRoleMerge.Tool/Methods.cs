@@ -215,39 +215,5 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge
 
             CreateRolePrivilegesInBulk(svc, role, rolePrivileges);
         }
-
-        //public static List<RoleOptions> SelectRolesForMerge(IOrganizationService svc)
-        //{
-        //    var selectedRoles = new List<RoleOptions>();
-        //    roleList.
-        //    Console.WriteLine("Please select from one of the following roles to merge using the corresponding numeric value:");
-        //    var roles = GetRolesForMerge(svc);
-        //    foreach (var role in roles)
-        //    {
-        //        Console.WriteLine($"({role.Value}) {role.Name}");
-        //    }
-
-        //    while (true)
-        //    {
-        //        Console.Write($"\nEnter Role# or 'M' to start Merge: ");
-        //        var input = Console.ReadLine();
-        //        if (input.ToLower() == "m")
-        //        {
-        //            break;
-        //        }
-        //        else if (int.Parse(input) > 0 && int.Parse(input) <= roles.Count)
-        //        {
-        //            var selection = new RoleOptions(selectedRoles.Count() + 1, roles[int.Parse(input) - 1].Name, roles[int.Parse(input) - 1].ID);
-        //            selectedRoles.Add(selection);
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("Invalid selection, try again.");
-        //            continue;
-        //        }
-        //    }
-
-        //    return selectedRoles;
-        //}
     }
 }

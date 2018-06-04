@@ -115,7 +115,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleLogger.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="MyPlugin.cs" />
