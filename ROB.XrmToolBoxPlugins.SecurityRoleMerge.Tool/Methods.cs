@@ -185,35 +185,35 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge
         {
             List<RolePrivilege> rolePrivileges = new List<RolePrivilege>();
 
-            for (int i = 0; i < selectedRoles.Count; i++)
-            {
-                var selectedRole = GetRolePrivileges(svc, selectedRoles[i].ID);
-
-                foreach (var priv in selectedRole)
+                for (int i = 0; i < selectedRoles.Count; i++)
                 {
-                    var match = rolePrivileges.Find(x => x.PrivilegeId == priv.PrivilegeId);
+                    var selectedRole = GetRolePrivileges(svc, selectedRoles[i].ID);
 
-                    if (match != null)
+                    foreach (var priv in selectedRole)
                     {
-                        if (priv.PrivilegeDepthMask > SetPrivDepthMask(match.Depth))
+                        var match = rolePrivileges.Find(x => x.PrivilegeId == priv.PrivilegeId);
+
+                        if (match != null)
                         {
-                            rolePrivileges[rolePrivileges.IndexOf(match)] = new RolePrivilege(Convert.ToInt32(GetPrivDepthMask(priv.PrivilegeDepthMask)), priv.PrivilegeId);
-                            //logger.Log("Create", $"since {priv.Name} ({priv.PrivilegeDepthMask}) in {selectedRoles[i].Name} > {match.PrivilegeId} ({Methods.SetPrivDepthMask(match.Depth)}) in new Role.");
+                            if (priv.PrivilegeDepthMask > SetPrivDepthMask(match.Depth))
+                            {
+                                rolePrivileges[rolePrivileges.IndexOf(match)] = new RolePrivilege(Convert.ToInt32(GetPrivDepthMask(priv.PrivilegeDepthMask)), priv.PrivilegeId);
+                                //logger.Log("Create", $"since {priv.Name} ({priv.PrivilegeDepthMask}) in {selectedRoles[i].Name} > {match.PrivilegeId} ({Methods.SetPrivDepthMask(match.Depth)}) in new Role.");
+                            }
+                            else
+                            {
+                                //logger.Log("Skip", $"since {selectedRoles[i].Name} {priv.Name} ({priv.PrivilegeDepthMask}) < OR == {match.PrivilegeId} ({Methods.SetPrivDepthMask(match.Depth)})");
+                            }
                         }
                         else
                         {
-                            //logger.Log("Skip", $"since {selectedRoles[i].Name} {priv.Name} ({priv.PrivilegeDepthMask}) < OR == {match.PrivilegeId} ({Methods.SetPrivDepthMask(match.Depth)})");
+                            rolePrivileges.Add(new RolePrivilege(Convert.ToInt32(GetPrivDepthMask(priv.PrivilegeDepthMask)), priv.PrivilegeId));
+                            //logger.Log("Create", $"since {priv.Name} did not exist in new role.");
                         }
                     }
-                    else
-                    {
-                        rolePrivileges.Add(new RolePrivilege(Convert.ToInt32(GetPrivDepthMask(priv.PrivilegeDepthMask)), priv.PrivilegeId));
-                        //logger.Log("Create", $"since {priv.Name} did not exist in new role.");
-                    }
                 }
-            }
 
-            CreateRolePrivilegesInBulk(svc, role, rolePrivileges);
+                CreateRolePrivilegesInBulk(svc, role, rolePrivileges);
         }
     }
 }

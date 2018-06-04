@@ -188,7 +188,15 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             }
             else
             {
-                ExecuteMethod(CreateRole);
+                if (roleList.CheckedItems.Count > 0)
+                {
+                    ExecuteMethod(CreateRole);
+                }
+                else
+                {
+                    MessageBox.Show("You have not selected any roles!");
+                }
+
             }
         }
 
