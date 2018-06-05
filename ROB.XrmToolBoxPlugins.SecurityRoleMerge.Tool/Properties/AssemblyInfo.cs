@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool")]
-[assembly: AssemblyDescription("A tool to merge multiple security roles into one.")]
+[assembly: AssemblyDescription("A tool to merge multiple security roles into one. Respects the native CRM security hierarchy.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ari Robbins")]
 [assembly: AssemblyProduct("ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool")]
