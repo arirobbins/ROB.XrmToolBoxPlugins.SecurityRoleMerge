@@ -44,6 +44,8 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             }
         }
 
+        
+
         private void tsbClose_Click(object sender, EventArgs e)
         {
             CloseTool();
@@ -152,8 +154,11 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         /// </summary>
         public override void UpdateConnection(IOrganizationService newService, ConnectionDetail detail, string actionName, object parameter)
         {
-            base.UpdateConnection(newService, detail, actionName, parameter);
+            roleList.Items.Clear();
+            toolStripTextBox_securityRoleName.Text = SecurityRoleTextBoxDefaultText;
 
+            base.UpdateConnection(newService, detail, actionName, parameter);
+            
             //mySettings.LastUsedOrganizationWebappUrl = detail.WebApplicationUrl;
             LogInfo("Connection has changed to: {0}", detail.WebApplicationUrl);
         }
