@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Tooling.Connector;
 
@@ -214,6 +215,17 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge
                 }
 
                 CreateRolePrivilegesInBulk(svc, role, rolePrivileges);
+        }
+
+        public static void DeleteRole(IOrganizationService svc, List<RoleOptions> rolesForDelete)
+        {
+            foreach (var role in rolesForDelete)
+            {
+                var target = new EntityReference("role", role.ID);
+                var deleteRequest = new DeleteRequest();
+                deleteRequest.Target = target;
+                svc.Execute(deleteRequest);
+            }
         }
     }
 }

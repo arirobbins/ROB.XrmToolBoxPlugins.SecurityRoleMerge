@@ -7,8 +7,8 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
     // Do not forget to update version number and author (company attribute) in AssemblyInfo.cs class
     // To generate Base64 string for Images below, you can use https://www.base64-image.de/
     [Export(typeof(IXrmToolBoxPlugin)),
-        ExportMetadata("Name", "Security Role Merge"),
-        ExportMetadata("Description", "A tool to merge multiple security roles into one."),
+        ExportMetadata("Name", "Security Role Manager"),
+        ExportMetadata("Description", "A tool to manage security roles, including the ability to merge multiple security roles into one."),
         // Please specify the base64 content of a 32x32 pixels image
         ExportMetadata("SmallImageBase64", "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"),
         // Please specify the base64 content of a 80x80 pixels image
@@ -16,11 +16,11 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         ExportMetadata("BackgroundColor", "Lavender"),
         ExportMetadata("PrimaryFontColor", "Black"),
         ExportMetadata("SecondaryFontColor", "Gray")]
-    public class MyPlugin : PluginBase
+    public class Plugin : PluginBase
     {
         public override IXrmToolBoxPluginControl GetControl()
         {
-            return new MyPluginControl();
+            return new PluginControl();
         }
     }
 }

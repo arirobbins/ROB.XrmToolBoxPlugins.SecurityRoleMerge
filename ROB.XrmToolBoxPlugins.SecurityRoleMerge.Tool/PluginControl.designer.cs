@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
 {
-    partial class MyPluginControl
+    partial class PluginControl
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -31,7 +31,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyPluginControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginControl));
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
             this.tsbClose = new System.Windows.Forms.ToolStripButton();
             this.tssSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -43,6 +43,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             this.roleList = new System.Windows.Forms.CheckedListBox();
             this.linkLabel_showInstructions = new System.Windows.Forms.LinkLabel();
             this.textBox_instructions = new System.Windows.Forms.TextBox();
+            this.toolStripButton_delete = new System.Windows.Forms.ToolStripButton();
             this.toolStripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             this.toolStripButton_getRoles,
             this.toolStripSeparator1,
             this.toolStripTextBox_securityRoleName,
-            this.toolStripButton_merge});
+            this.toolStripButton_merge,
+            this.toolStripButton_delete});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.Size = new System.Drawing.Size(794, 25);
@@ -161,7 +163,17 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             this.textBox_instructions.Text = resources.GetString("textBox_instructions.Text");
             this.textBox_instructions.Visible = false;
             // 
-            // MyPluginControl
+            // toolStripButton_delete
+            // 
+            this.toolStripButton_delete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_delete.Image")));
+            this.toolStripButton_delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton_delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_delete.Name = "toolStripButton_delete";
+            this.toolStripButton_delete.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton_delete.Text = "Delete";
+            this.toolStripButton_delete.Click += new System.EventHandler(this.toolStripButton_delete_Click);
+            // 
+            // PluginControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,7 +182,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             this.Controls.Add(this.roleList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStripMenu);
-            this.Name = "MyPluginControl";
+            this.Name = "PluginControl";
             this.Size = new System.Drawing.Size(794, 475);
             this.Load += new System.EventHandler(this.MyPluginControl_Load);
             this.toolStripMenu.ResumeLayout(false);
@@ -192,5 +204,6 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox_securityRoleName;
         private System.Windows.Forms.LinkLabel linkLabel_showInstructions;
         private System.Windows.Forms.TextBox textBox_instructions;
+        private System.Windows.Forms.ToolStripButton toolStripButton_delete;
     }
 }

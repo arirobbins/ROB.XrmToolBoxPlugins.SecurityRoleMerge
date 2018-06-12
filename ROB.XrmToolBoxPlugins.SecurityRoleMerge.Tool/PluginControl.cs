@@ -15,14 +15,14 @@ using Microsoft.Crm.Sdk.Messages;
 
 namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
 {
-    public partial class MyPluginControl : PluginControlBase
+    public partial class PluginControl : PluginControlBase
     {
         public string SecurityRoleTextBoxDefaultText = "Enter New Security Role Name Here";
         private Settings mySettings;
         public List<RoleOptions> AvailableRoles { get; set; }
         public Guid Role { get; set; }
 
-        public MyPluginControl()
+        public PluginControl()
         {
             InitializeComponent();
         }
@@ -138,6 +138,38 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             });
         }
 
+        private void DeleteRoles()
+        {
+            var results = roleList.CheckedItems;
+            var rolesForDelete = new List<RoleOptions>();
+            foreach (var result in results)
+            {
+                rolesForDelete.Add(new RoleOptions(results.IndexOf(result) + 1, ((RoleOptions)result).Name, ((RoleOptions)result).ID));
+            }
+
+            WorkAsync(new WorkAsyncInfo
+            {
+                Message = "Deleting Roles",
+                Work = (worker, args) =>
+                {
+                    Methods.DeleteRole(Service, rolesForDelete);
+
+                },
+                PostWorkCallBack = (args) =>
+                {
+                    if (args.Error != null)
+                    {
+                        MessageBox.Show(args.Error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    MessageBox.Show("Roles Deleted!");
+                    toolStripTextBox_securityRoleName.Text = SecurityRoleTextBoxDefaultText;
+                    roleList.Items.Clear();
+                    ExecuteMethod(GetRoles);
+                }
+            });
+        }
+
         /// <summary>
         /// This event occurs when the plugin is closed
         /// </summary>
@@ -209,6 +241,31 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         {
             textBox_instructions.Visible = !textBox_instructions.Visible;
             linkLabel_showInstructions.Text = textBox_instructions.Visible ? "Hide Instructions" : "Show Instructions";
+        }
+
+        private void toolStripButton_delete_Click(object sender, EventArgs e)
+        {
+            if (roleList.CheckedItems.Count < 1)
+            {
+                MessageBox.Show("You haven't selected any roles!");
+            }
+            else
+            {
+                var message = "Are you sure you want to delete these roles, this can't be undone!";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+                result = MessageBox.Show(message, "Delete", buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                    //MessageBox.Show("you decided to delete!");
+                    ExecuteMethod(DeleteRoles);
+                }
+                else
+                {
+                    MessageBox.Show("you decided NOT to delete");
+                }
+            }
         }
     }
 }
