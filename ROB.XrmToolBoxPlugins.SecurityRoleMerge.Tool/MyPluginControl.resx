@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
   <data name="tsbClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -145,37 +145,36 @@
   </data>
   <data name="toolStripButton_getRoles.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPlZLdS5NhGMb3LwSdBUEHge2sDjr0IBrVQU58
-        9/Hqms3yowylNom1aka6hobNbC+IbYmupIhGptvMrX2vqBShOdMtlynOMKIgDWGvu9qeuY3XFeQFNzzc
-        13P97oebh/cvdRoYbB13prlPcXiDbzFsd2HHEIfTS0LtHQYwvSaY+i2oO9/0f5Cnz+24ekMHsUSKE2UU
-        Wq5oQUnoojA73IePQj63P+4OQHtTj/qGc3lje3hxNQ42aMPCJQrxl9aCNxuLQ3/7LsTS4mk5pTZ+QzMi
-        R2xiDKvTk9x7Lk8IF5pVMJsfEAPfviI16ctfSv36ic3ZKWgd1QTyYX6CC7A8tkJMyxCZmSEGO6hHklGD
-        NV7DZmIB7Asz1t97CeDZkhG1TDneRUIFSDdzH+WUJN/wHN2LNSkfybYabGho/NA1YMVnx/UxOQFkqrFP
-        hOCUJ5tpTS/viOA45qJR0lj7EoP/5AF8F5VgSViC0FkB1hOLUI/KYFxWkdKFa8lLwvPpfZj6ByGskOLh
-        o6HCs9LyUwdhK92DzwNdSLFJKK2VUEcrSEleH8KxJ3yUqUrBC4beoPpMPZqalRxARgsjWSjSujgkhSJ8
-        mJTAsh+79+3CK58rm+lheiGi5WjX6YsgGWUAjQMUJ+wNbO0gp9a2W5BWnYay5TJGbQ6OuZxYIYBc2Ol1
-        /nUQr8twD/QpBQFJKuWgZQqoNVr4A0HUMRQJO8a58CK5PV509zDpz6VElbwGHZ13EJ6OEIDTvX0yj/cH
-        doKM74nS+PAAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAj1JREFUOE+Vkt1Lk2EYxvcvBJ0FQQeB7awOOvQgGtVBTnz38eqazfKjDKU2ibVq
+        RrqGhs1sL4htia6kiEam28ytfa+oFKE50y2XKc4woiANYa+72p65jdcV5AU3PNzXc/3uh5uH9y91Ghhs
+        HXemuU9xeINvMWx3YccQh9NLQu0dBjC9Jpj6Lag73/R/kKfP7bh6QwexRIoTZRRarmhBSeiiMDvch49C
+        Prc/7g5Ae1OP+oZzeWN7eHE1DjZow8IlCvGX1oI3G4tDf/suxNLiaTmlNn5DMyJHbGIMq9OT3HsuTwgX
+        mlUwmx8QA9++IjXpy19K/fqJzdkpaB3VBPJhfoILsDy2QkzLEJmZIQY7qEeSUYM1XsNmYgHsCzPW33sJ
+        4NmSEbVMOd5FQgVIN3Mf5ZQk3/Ac3Ys1KR/JthpsaGj80DVgxWfH9TE5AWSqsU+E4JQnm2lNL++I4Djm
+        olHSWPsSg//kAXwXlWBJWILQWQHWE4tQj8pgXFaR0oVryUvC8+l9mPoHIayQ4uGjocKz0vJTB2Er3YPP
+        A11IsUkorZVQRytISV4fwrEnfJSpSsELht6g+kw9mpqVHEBGCyNZKNK6OCSFInyYlMCyH7v37cIrnyub
+        6WF6IaLlaNfpiyAZZQCNAxQn7A1s7SCn1rZbkFadhrLlMkZtDo65nFghgFzY6XX+dRCvy3AP9CkFAUkq
+        5aBlCqg1WvgDQdQxFAk7xrnwIrk9XnT3MOnPpUSVvAYdnXcQno4QgNO9fTKP9wd2gozvidL48AAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="toolStripButton_merge.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVDhPvVKBCYAwDNsJnuJFm7DtLz/SDzxBP9B2tFiG
-        xSrTQDCuTVyLrjlyzjuy1mZ8EpBS6kvRAhkQY1z4XWMxScDhhAX46oAEvXLzFcl2gky7935DHULoqKSj
-        Tn3CNgEaeBwg7gGmMYwjAQEzBvAu4Dnibij0/gayCc3SKGsqZBNrCHr3U0ltxg8Bzh158eT+ltOUvgAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAI9JREFUOE+9UoEJgDAM2wme4kWbsO0vP9IPPEE/0Ha0WIbFKtNAMK5NXIuuOXLO
+        O7LWZnwSkFLqS9ECGRBjXPhdYzFJwOGEBfjqgAS9cvMVyXaCTLv3fkMdQuiopKNOfcI2ARp4HCDuAaYx
+        jCMBATMG8C7gOeJuKPT+BrIJzdIoaypkE2sIevdTSW3GDwHOHXnx5P6W05S+AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="textBox_instructions.Text" xml:space="preserve">
-    <value>This tool allows you to select multiple security roles and merge them into a newly created role.
+    <value>This tool allows you to select multiple security roles and merge them into a newly created or existing role.
 
 Follow the steps below to easily merge security roles:
 
 1) Click 'Get Roles' to get a list of roles from Dynamics 365.
 2) Check the box next to each role you want to merge.
-3) Enter a unique name for the new security role which the others will be merged into.
+3) Enter a unique name for the new security role which the others will be merged into or select an existing Role to merge into.
 4) Click 'Merge' to merge the roles into one.</value>
   </data>
 </root>
