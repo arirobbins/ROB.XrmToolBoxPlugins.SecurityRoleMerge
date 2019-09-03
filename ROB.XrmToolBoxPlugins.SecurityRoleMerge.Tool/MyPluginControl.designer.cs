@@ -38,6 +38,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             this.toolStripButton_getRoles = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox_securityRoleName = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripComboBox_existingRoles = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripButton_merge = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.roleList = new System.Windows.Forms.CheckedListBox();
@@ -55,6 +56,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             this.toolStripButton_getRoles,
             this.toolStripSeparator1,
             this.toolStripTextBox_securityRoleName,
+            this.toolStripComboBox_existingRoles,
             this.toolStripButton_merge});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
@@ -96,12 +98,20 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             // toolStripTextBox_securityRoleName
             // 
             this.toolStripTextBox_securityRoleName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripTextBox_securityRoleName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox_securityRoleName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.toolStripTextBox_securityRoleName.Name = "toolStripTextBox_securityRoleName";
             this.toolStripTextBox_securityRoleName.Size = new System.Drawing.Size(200, 25);
             this.toolStripTextBox_securityRoleName.Text = "Enter New Security Role Name Here";
             this.toolStripTextBox_securityRoleName.Enter += new System.EventHandler(this.toolStripTextBox_securityRoleName_Enter);
             this.toolStripTextBox_securityRoleName.Leave += new System.EventHandler(this.toolStripTextBox_securityRoleName_Leave);
+            // 
+            // toolStripComboBox_existingRoles
+            // 
+            this.toolStripComboBox_existingRoles.Name = "toolStripComboBox_existingRoles";
+            this.toolStripComboBox_existingRoles.Size = new System.Drawing.Size(200, 25);
+            this.toolStripComboBox_existingRoles.Text = "Or Choose An Existing Role";
+            this.toolStripComboBox_existingRoles.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox_existingRoles_SelectedIndexChanged);
             // 
             // toolStripButton_merge
             // 
@@ -192,5 +202,6 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox_securityRoleName;
         private System.Windows.Forms.LinkLabel linkLabel_showInstructions;
         private System.Windows.Forms.TextBox textBox_instructions;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox_existingRoles;
     }
 }
