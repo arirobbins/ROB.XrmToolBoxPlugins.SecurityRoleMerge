@@ -18,6 +18,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
     public partial class MyPluginControl : PluginControlBase
     {
         public string SecurityRoleTextBoxDefaultText = "Enter New Security Role Name Here";
+        public ComboboxItem SecurityRoleExistingDefaultValue = new ComboboxItem { Text = "Or Choose An Existing Role", Value = 0 };
         private Settings mySettings;
         public List<RoleOptions> AvailableRoles { get; set; }
         public Guid Role { get; set; }
@@ -42,6 +43,9 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             {
                 LogInfo("Settings found and loaded");
             }
+
+            //adds a default value to the existing role drop down
+            toolStripComboBox_existingRoles.Items.Add(SecurityRoleExistingDefaultValue);
         }
 
         
@@ -72,6 +76,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
                         foreach (var role in result)
                         {
                             roleList.Items.Add(role);
+                            toolStripComboBox_existingRoles.Items.Add(new ComboboxItem() { Text = role.Name, Value = role.ID });
                         }
                     }
                 }
@@ -131,7 +136,12 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
                     }
                     
                     MessageBox.Show("Merge Complete!");
+                    Role = Guid.Empty;
                     toolStripTextBox_securityRoleName.Text = SecurityRoleTextBoxDefaultText;
+                    toolStripComboBox_existingRoles.SelectedIndex = 0;
+                    toolStripComboBox_existingRoles.Items.Clear();
+                    toolStripComboBox_existingRoles.Items.Add(SecurityRoleExistingDefaultValue);
+                    toolStripComboBox_existingRoles.Enabled = true;
                     roleList.Items.Clear();
                     ExecuteMethod(GetRoles);
                 }
@@ -168,7 +178,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             if (toolStripTextBox_securityRoleName.Text == SecurityRoleTextBoxDefaultText)
             {
                 toolStripTextBox_securityRoleName.Clear();
-            }
+            }            
         }
 
         private void toolStripTextBox_securityRoleName_Leave(object sender, EventArgs e)
@@ -176,32 +186,45 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             if (String.IsNullOrWhiteSpace(toolStripTextBox_securityRoleName.Text))
             {
                 toolStripTextBox_securityRoleName.Text = SecurityRoleTextBoxDefaultText;
+                toolStripComboBox_existingRoles.Enabled = true;
+            }
+            else {
+                toolStripComboBox_existingRoles.SelectedIndex = 0;
+                toolStripComboBox_existingRoles.Enabled = false;                
             }
         }
 
         private void toolStripButton_getRoles_Click(object sender, EventArgs e)
         {
             roleList.Items.Clear();
+            toolStripComboBox_existingRoles.Items.Clear();
+            toolStripComboBox_existingRoles.Items.Add(SecurityRoleExistingDefaultValue);
             ExecuteMethod(GetRoles);
         }
 
         private void toolStripButton_merge_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(toolStripTextBox_securityRoleName.Text) || toolStripTextBox_securityRoleName.Text == SecurityRoleTextBoxDefaultText)
+            if ((String.IsNullOrEmpty(toolStripTextBox_securityRoleName.Text) || toolStripTextBox_securityRoleName.Text == SecurityRoleTextBoxDefaultText) && toolStripComboBox_existingRoles.SelectedIndex == 0)
             {
-                MessageBox.Show("You must enter a name for your new security role!");
+                MessageBox.Show("You must enter a name for your new security role or chose and existing one!");
             }
             else
             {
                 if (roleList.CheckedItems.Count > 0)
                 {
-                    ExecuteMethod(CreateRole);
+                    if (Role != Guid.Empty)
+                    {
+                        ExecuteMethod(MergeRoles);
+                    }
+                    else
+                    {
+                        ExecuteMethod(CreateRole);
+                    }
                 }
                 else
                 {
                     MessageBox.Show("You have not selected any roles!");
                 }
-
             }
         }
 
@@ -209,6 +232,19 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         {
             textBox_instructions.Visible = !textBox_instructions.Visible;
             linkLabel_showInstructions.Text = textBox_instructions.Visible ? "Hide Instructions" : "Show Instructions";
+        }
+
+        private void toolStripComboBox_existingRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBox_existingRoles.SelectedIndex == 0)
+            {
+                toolStripTextBox_securityRoleName.Enabled = true;
+                Role = Guid.Empty;
+            }
+            else {
+                toolStripTextBox_securityRoleName.Enabled = false;
+                Role = new Guid((toolStripComboBox_existingRoles.SelectedItem as ComboboxItem).Value.ToString());
+            }
         }
     }
 }

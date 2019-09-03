@@ -117,65 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripMenu.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
   <data name="tsbClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfiBgUTIB8pKiHFAAAAB3RFWHRBdXRob3IAqa7M
-        SAAAAAx0RVh0RGVzY3JpcHRpb24AEwkhIwAAAAp0RVh0Q29weXJpZ2h0AKwPzDoAAAAJdEVYdFNvZnR3
-        YXJlAF1w/zoAAAAHdEVYdFNvdXJjZQD1/4PrAAAACHRFWHRDb21tZW50APbMlr8AAAAGdEVYdFRpdGxl
-        AKju0icAAAMFSURBVDhPXVJ/LNRhGP8iXz867pyTM3cuvzmOKDQhba6ZpRkjv006qa2oxNRQlIwoKpYy
-        U63+kNY/LUNJUzaqVX7O6v5QKlYt2klpfXq+p7udnu3zfb7v53mez/M+7/syALQgM87z9k4nz9Nx/yNH
-        Lk+huJ0ht/JhGPZGjqrza9s11CUk9NJaZJjE4Vxc3MUP9Y1oSkl9RvH1Op4z0/Y9uXd/trZjseY8frS0
-        oS5p12Pi9Z0a4uNbZ2vPQXOoGIsnq1CfmPSSZVmtCFOqVDb8udWBhfLTmC0pw3xZJTSXLqMiNrabRKQ1
-        cXG1H2vqMX/wKGayVJhLzsSvymoUbd02zDVh0hSK5L6S40vLjc2YO3oMnw4XY764FNNVtWhIT1ePlldg
-        4WAhZjJz8D4pHQvZeejbrUKIRDJEAt7aLYY7OuY+LCpZXqYRZg8cwcf9BfhcUAQNzfwlnzqnZuPdzkR8
-        S8pAb2Y23EUirruSYKw/pAixWNVVUKj5XnEGn/blYyYtG9OR0VDLN2LSQYY3EjfcDAmFjG89SIXRujq9
-        AAc3K8uU/sKin3NbojDJs8UEY4ZRxhhTa9aiIzAYApZ9QMVhhjWrBI4EBVUPhUf9fmtiiXHG9J+AOUZI
-        oNvFAzFi8RMSsDGs0f+UBYc0vY5QQm1ujRGGJQFzqFkBxsgPk9igkSl6JDJkSmXcO9FfsfZT6h/QMhYa
-        iQkzHoZoy8OMCSZEEjyN3I5JR1daG6OXuPvkH0nWQyVx6teJMFkeHqeeh4RheA2LHtLrIrzi2eCqYgMU
-        69a9uBCwSTNlLwUNj04S6CTfL3NFitSJOw8hs8PZeX+Hjz8GzSxwh4IDFmvR4uIOKY83QAmbvYTCjGYf
-        v6URWzHuUbzXzBw3PeXwE9iMUdxXO4JCJCq/TuS4vQPa3DzhaMXj3rtSN6evULj3itz3l1rqgtvevnDm
-        87niBIKpNoFDuIPDibMbAuHF53MvTH/POgQLBLk1G4OWAuzsximeSDDh+FVJZMmEKEPOEGSxhBiC0QoH
-        5i8eGwhCPSze0AAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAAd0SU1FB+IGBRMgHykqIcUAAAAHdEVYdEF1dGhvcgCprsxIAAAADHRFWHREZXNj
+        cmlwdGlvbgATCSEjAAAACnRFWHRDb3B5cmlnaHQArA/MOgAAAAl0RVh0U29mdHdhcmUAXXD/OgAAAAd0
+        RVh0U291cmNlAPX/g+sAAAAIdEVYdENvbW1lbnQA9syWvwAAAAZ0RVh0VGl0bGUAqO7SJwAAAwVJREFU
+        OE9dUn8s1GEY/yJfPzrunJMzdy6/OY4oNCFtrpmlGSO/TTqprajE1FCUjCgqljJTrf6Q1j8tQ0lTNqpV
+        fs7q/lAqVi3aSWl9er6nu52e7fN9vu/neZ7P8z7v+zIAtCAzzvP2TifP03H/I0cuT6G4nSG38mEY9kaO
+        qvNr2zXUJST00lpkmMThXFzcxQ/1jWhKSX1G8fU6njPT9j25d3+2tmOx5jx+tLShLmnXY+L1nRri41tn
+        a89Bc6gYiyerUJ+Y9JJlWa0IU6pUNvy51YGF8tOYLSnDfFklNJcuoyI2tptEpDVxcbUfa+oxf/AoZrJU
+        mEvOxK/KahRt3TbMNWHSFIrkvpLjS8uNzZg7egyfDhdjvrgU01W1aEhPV4+WV2DhYCFmMnPwPikdC9l5
+        6NutQohEMkQC3tothjs65j4sKllephFmDxzBx/0F+FxQBA3N/CWfOqdm493ORHxLykBvZjbcRSKuu5Jg
+        rD+kCLFY1VVQqPlecQaf9uVjJi0b05HRUMs3YtJBhjcSN9wMCYWMbz1IhdG6Or0ABzcry5T+wqKfc1ui
+        MMmzxQRjhlHGGFNr1qIjMBgCln1AxWGGNasEjgQFVQ+FR/1+a2KJccb0n4A5Rkig28UDMWLxExKwMazR
+        /5QFhzS9jlBCbW6NEYYlAXOoWQHGyA+T2KCRKXokMmRKZdw70V+x9lPqH9AyFhqJCTMehmjLw4wJJkQS
+        PI3cjklHV1obo5e4++QfSdZDJXHq14kwWR4ep56HhGF4DYse0usivOLZ4KpiAxTr1r24ELBJM2UvBQ2P
+        ThLoJN8vc0WK1Ik7DyGzw9l5f4ePPwbNLHCHggMWa9Hi4g4pjzdACZu9hMKMZh+/pRFbMe5RvNfMHDc9
+        5fAT2IxR3Fc7gkIkKr9O5Li9A9rcPOFoxePeu1I3p69QuPeK3PeXWuqC296+cObzueIEgqk2gUO4g8OJ
+        sxsC4cXncy9Mf886BAsEuTUbg5YC7OzGKZ5IMOH4VUlkyYQoQ84QZLGEGILRCgfmLx4bCEI9LN7QAAAA
+        AElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripButton_getRoles.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPlZLdS5NhGMb3LwSdBUEHge2sDjr0IBrVQU58
-        9/Hqms3yowylNom1aka6hobNbC+IbYmupIhGptvMrX2vqBShOdMtlynOMKIgDWGvu9qeuY3XFeQFNzzc
-        13P97oebh/cvdRoYbB13prlPcXiDbzFsd2HHEIfTS0LtHQYwvSaY+i2oO9/0f5Cnz+24ekMHsUSKE2UU
-        Wq5oQUnoojA73IePQj63P+4OQHtTj/qGc3lje3hxNQ42aMPCJQrxl9aCNxuLQ3/7LsTS4mk5pTZ+QzMi
-        R2xiDKvTk9x7Lk8IF5pVMJsfEAPfviI16ctfSv36ic3ZKWgd1QTyYX6CC7A8tkJMyxCZmSEGO6hHklGD
-        NV7DZmIB7Asz1t97CeDZkhG1TDneRUIFSDdzH+WUJN/wHN2LNSkfybYabGho/NA1YMVnx/UxOQFkqrFP
-        hOCUJ5tpTS/viOA45qJR0lj7EoP/5AF8F5VgSViC0FkB1hOLUI/KYFxWkdKFa8lLwvPpfZj6ByGskOLh
-        o6HCs9LyUwdhK92DzwNdSLFJKK2VUEcrSEleH8KxJ3yUqUrBC4beoPpMPZqalRxARgsjWSjSujgkhSJ8
-        mJTAsh+79+3CK58rm+lheiGi5WjX6YsgGWUAjQMUJ+wNbO0gp9a2W5BWnYay5TJGbQ6OuZxYIYBc2Ol1
-        /nUQr8twD/QpBQFJKuWgZQqoNVr4A0HUMRQJO8a58CK5PV509zDpz6VElbwGHZ13EJ6OEIDTvX0yj/cH
-        doKM74nS+PAAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAj1JREFUOE+Vkt1Lk2EYxvcvBJ0FQQeB7awOOvQgGtVBTnz38eqazfKjDKU2ibVq
+        RrqGhs1sL4htia6kiEam28ytfa+oFKE50y2XKc4woiANYa+72p65jdcV5AU3PNzXc/3uh5uH9y91Ghhs
+        HXemuU9xeINvMWx3YccQh9NLQu0dBjC9Jpj6Lag73/R/kKfP7bh6QwexRIoTZRRarmhBSeiiMDvch49C
+        Prc/7g5Ae1OP+oZzeWN7eHE1DjZow8IlCvGX1oI3G4tDf/suxNLiaTmlNn5DMyJHbGIMq9OT3HsuTwgX
+        mlUwmx8QA9++IjXpy19K/fqJzdkpaB3VBPJhfoILsDy2QkzLEJmZIQY7qEeSUYM1XsNmYgHsCzPW33sJ
+        4NmSEbVMOd5FQgVIN3Mf5ZQk3/Ac3Ys1KR/JthpsaGj80DVgxWfH9TE5AWSqsU+E4JQnm2lNL++I4Djm
+        olHSWPsSg//kAXwXlWBJWILQWQHWE4tQj8pgXFaR0oVryUvC8+l9mPoHIayQ4uGjocKz0vJTB2Er3YPP
+        A11IsUkorZVQRytISV4fwrEnfJSpSsELht6g+kw9mpqVHEBGCyNZKNK6OCSFInyYlMCyH7v37cIrnyub
+        6WF6IaLlaNfpiyAZZQCNAxQn7A1s7SCn1rZbkFadhrLlMkZtDo65nFghgFzY6XX+dRCvy3AP9CkFAUkq
+        5aBlCqg1WvgDQdQxFAk7xrnwIrk9XnT3MOnPpUSVvAYdnXcQno4QgNO9fTKP9wd2gozvidL48AAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="toolStripButton_merge.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVDhPvVKBDYAgDOMET/EjJMBffqQfeIJ+oBvZ4kJc
-        nAZt0ljZWtmia46c846stRmfBKSU+lK0QAbEGBd+11hMEnA4YQG+OiBBr9x8RbKdINMeQthQe+87Kumo
-        U5+wTYAGHgeIe4BpDONIQMCMAbwLeI64Gwq9v4FsQrM0ypoK2cQagt79VFKb8UOAcweb1eUQUyWsIwAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAI9JREFUOE+9UoEJgDAM2wme4kWbsO0vP9IPPEE/0Ha0WIbFKtNAMK5NXIuuOXLO
+        O7LWZnwSkFLqS9ECGRBjXPhdYzFJwOGEBfjqgAS9cvMVyXaCTLv3fkMdQuiopKNOfcI2ARp4HCDuAaYx
+        jCMBATMG8C7gOeJuKPT+BrIJzdIoaypkE2sIevdTSW3GDwHOHXnx5P6W05S+AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="textBox_instructions.Text" xml:space="preserve">
-    <value>This tool allows you to select multiple security roles and merge them into a newly created role.
+    <value>This tool allows you to select multiple security roles and merge them into a newly created or existing role.
 
 Follow the steps below to easily merge security roles:
 
 1) Click 'Get Roles' to get a list of roles from Dynamics 365.
 2) Check the box next to each role you want to merge.
-3) Enter a unique name for the new security role which the others will be merged into.
+3) Enter a unique name for the new security role which the others will be merged into or select an existing Role to merge into.
 4) Click 'Merge' to merge the roles into one.</value>
   </data>
 </root>

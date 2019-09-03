@@ -116,6 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComboBoxItem.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="MyPlugin.cs" />
