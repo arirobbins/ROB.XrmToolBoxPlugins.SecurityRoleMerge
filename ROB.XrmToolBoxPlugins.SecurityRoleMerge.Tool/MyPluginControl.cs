@@ -18,6 +18,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
     public partial class MyPluginControl : PluginControlBase
     {
         public string SecurityRoleTextBoxDefaultText = "Enter New Security Role Name Here";
+        public ComboboxItem SecurityRoleExistingDefaultValue = new ComboboxItem { Text = "Or Choose An Existing Role", Value = 0 };
         private Settings mySettings;
         public List<RoleOptions> AvailableRoles { get; set; }
         public Guid Role { get; set; }
@@ -44,7 +45,7 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
             }
 
             //adds a default value to the existing role drop down
-            toolStripComboBox_existingRoles.Items.Add(new ComboboxItem() { Text = "Or Choose An Existing Role", Value = 0 });
+            toolStripComboBox_existingRoles.Items.Add(SecurityRoleExistingDefaultValue);
         }
 
         
@@ -135,7 +136,12 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
                     }
                     
                     MessageBox.Show("Merge Complete!");
+                    Role = Guid.Empty;
                     toolStripTextBox_securityRoleName.Text = SecurityRoleTextBoxDefaultText;
+                    toolStripComboBox_existingRoles.SelectedIndex = 0;
+                    toolStripComboBox_existingRoles.Items.Clear();
+                    toolStripComboBox_existingRoles.Items.Add(SecurityRoleExistingDefaultValue);
+                    toolStripComboBox_existingRoles.Enabled = true;
                     roleList.Items.Clear();
                     ExecuteMethod(GetRoles);
                 }
@@ -191,6 +197,8 @@ namespace ROB.XrmToolBoxPlugins.SecurityRoleMerge.Tool
         private void toolStripButton_getRoles_Click(object sender, EventArgs e)
         {
             roleList.Items.Clear();
+            toolStripComboBox_existingRoles.Items.Clear();
+            toolStripComboBox_existingRoles.Items.Add(SecurityRoleExistingDefaultValue);
             ExecuteMethod(GetRoles);
         }
 
